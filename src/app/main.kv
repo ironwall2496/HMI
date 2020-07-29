@@ -1,0 +1,253 @@
+#:kivy 1.11.1
+Screen:
+    NavigationLayout:
+        ScreenManager:
+            id: screen_manager
+            Screen:
+                name:'screen0'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    MDToolbar:
+                        title: 'Roaster HMI'
+                        specific_text_color: app.theme_cls.opposite_bg_dark
+                        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+                        elevation: 10
+                    ScreenManager:
+                        id: screen_managera
+                        MDScreen:
+                            name:'screen1'
+                            md_bg_color: [0,0,0,0]
+
+                            MDBoxLayout:
+                                orientation: 'horizontal'
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                md_bg_color: [0,0,0,0]
+                                MDBoxLayout:
+                                    orientation: 'vertical'
+                                    size_hint_x: '0.3sp'
+                                    #adaptive_height: True
+                                    md_bg_color: app.theme_cls.opposite_divider_color
+                                    elevation: 10
+                                    MDBoxLayout:
+                                        orientation:'horizontal'
+                                        spacing: '1dp'
+                                        padding: '1dp'
+                                        #md_bg_color: app.theme_cls.opposite_divider_color
+                                        MDLabel:
+                                            text: 'Opciones de Tostado'
+                                            font_style: 'H6'
+                                            size_hint_y: '1sp'
+                                            halign: "center"
+                                            theme_text_color: "Custom"
+                                            text_color: app.theme_cls.opposite_bg_dark
+                                            height: self.texture_size[1]
+                                        Image:
+                                            source:'img/coffee.png'
+                                            halign: "center"
+                                    ScrollView:
+                                        size_hint_y: '3sp'
+                                        MDList:
+                                            size_hint_y: None
+                                            md_bg_color: app.theme_cls.primary_color
+                                            OneLineAvatarListItem:
+                                                text: 'opción1'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                            OneLineAvatarListItem:
+                                                text: 'opción2'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                            OneLineAvatarListItem:
+                                                text: 'opción3'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                            OneLineAvatarListItem:
+                                                text: 'opción4'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                            OneLineAvatarListItem:
+                                                text: 'opción5'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                            OneLineAvatarListItem:
+                                                text: 'opción6'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                            OneLineAvatarListItem:
+                                                text: 'opción7'
+                                                halign: "center"
+                                                font_style: 'H5'
+                                                IconLeftWidget:
+                                                    icon:'coffee'
+                                    
+                                MDBoxLayout:
+                                    orientation:"vertical"
+                                    #spacing: '5dp'
+                                    #padding: '3dp'
+                                    MDLabel:
+                                        text: 'Gráfica'
+                                        font_style: 'H4'
+                                        size_hint_y: '2sp'
+                                        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                        halign: "center"
+                                        theme_text_color: "Custom"
+                                        text_color: app.theme_cls.opposite_bg_dark
+                                    Widget:
+                                    MDBoxLayout:
+                                        orientation:"horizontal"
+                                        size_hint_y: '1sp'
+                                        md_bg_color: app.theme_cls.opposite_bg_dark
+                                        MDBoxLayout:
+                                            orientation:"vertical"
+                                            size_hint_x: '0.3sp'
+                                            spacing: '3dp'
+                                            padding: '3dp'
+                                            MDLabel:
+                                                text: 'Tiempo'
+                                                font_style: 'H6'
+                                                size_hint_y: '1sp'
+                                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                                halign: "center"
+                                                theme_text_color: "Custom"
+                                                text_color: app.theme_cls.primary_color
+                                            MDLabel:
+                                                text: 'Datos'
+                                                #font_style: 'H4'
+                                                size_hint_y: '1sp'
+                                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                                halign: "center"
+                                                #theme_text_color: "Custom"
+                                                #text_color: app.theme_cls.opposite_bg_dark
+                                        MDBoxLayout:
+                                            orientation:"vertical"
+                                            size_hint_x: '0.3sp'
+                                            spacing: '3dp'
+                                            padding: '3dp'
+                                            MDLabel:
+                                                text: 'Temperatura'
+                                                font_style: 'H6'
+                                                size_hint_y: '1sp'
+                                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                                halign: "center"
+                                                theme_text_color: "Custom"
+                                                text_color: app.theme_cls.primary_color
+                                            MDLabel:
+                                                text: 'Datos'
+                                                #font_style: 'H4'
+                                                size_hint_y: '1sp'
+                                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                                halign: "center"
+                                                #theme_text_color: "Custom"
+                                                #text_color: app.theme_cls.opposite_bg_dark
+                                        MDBoxLayout:
+                                            orientation:"vertical"
+                                            size_hint_x: '0.3sp'
+                                            spacing: '3dp'
+                                            padding: '3dp'
+                                            MDLabel:
+                                                text: 'RPM'
+                                                font_style: 'H6'
+                                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                                size_hint_y: '1sp'
+                                                halign: "center"
+                                                theme_text_color: "Custom"
+                                                text_color: app.theme_cls.primary_color
+                                            MDLabel:
+                                                text: 'Datos'
+                                                #font_style: 'H4'
+                                                size_hint_y: '1sp'
+                                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                                halign: "center"
+                                                #theme_text_color: "Custom"
+                                                #text_color: app.theme_cls.opposite_bg_dark        
+
+                        Screen:
+                            name:'screen2'
+                            MDLabel:
+                                text: 'Pantalla2'
+                                font_style: 'H4'
+                                size_hint_y: None
+                                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                                halign: "center"
+                                theme_text_color: "Custom"
+                                text_color: app.theme_cls.opposite_bg_dark
+        MDNavigationDrawer:
+            id: nav_drawer
+            MDBoxLayout:
+                orientation:'vertical'
+                MDBoxLayout:
+                    orientation:'vertical'
+                    spacing: '8dp'
+                    padding: '8dp'
+                    md_bg_color: app.theme_cls.primary_color
+                    Image:
+                        source:'img/roaster.png'
+
+                    MDLabel:
+                        text: '  Roaster'
+                        font_style: 'Subtitle1'
+                        size_hint_y: None
+                        theme_text_color: "Custom"
+                        text_color: [1,1,1, 1]
+                        height: self.texture_size[1]
+                        text_color: app.theme_cls.opposite_bg_dark
+                    MDLabel:
+                        text: '  roaster@gmail.com'
+                        font_style: 'Subtitle1'
+                        size_hint_y: None
+                        theme_text_color: "Custom"
+                        text_color: [1,1,1, 1]
+                        height: self.texture_size[1]
+                        text_color: app.theme_cls.opposite_bg_dark
+                    MDLabel:
+                        text: ' Seleccione un modo'
+                        font_style: 'H6'
+                        size_hint_y: None
+                        theme_text_color: "Custom"
+                        text_color: [1,1,1, 1]
+                        height: self.texture_size[1]
+                        text_color: app.theme_cls.opposite_bg_dark
+                MDBoxLayout:
+                    orientation:'vertical'
+                    spacing: '2dp'
+                    padding: '2dp'
+                    ScrollView:
+                        size_hint_y: '2sp'
+                        MDList:
+                            size_hint_y: '1sp'
+                            OneLineAvatarListItem:
+                                text: 'Automático'
+                                halign: "center"
+                                font_style: 'H5'
+                                md_bg_color:[1,1,1,1]
+                                on_release:
+                                    nav_drawer.set_state("close")
+                                    screen_managera.current = "screen1"
+                                IconLeftWidget:
+                                    icon:'coffee-maker'
+                            OneLineAvatarListItem:
+                                text: 'Semi-Automático'
+                                halign: "center"
+                                font_style: 'H5'
+                                md_bg_color:[1,1,1,1]
+                                on_release:
+                                    nav_drawer.set_state("close")
+                                    screen_managera.current = "screen2"
+                                IconLeftWidget:
+                                    icon:'coffee'

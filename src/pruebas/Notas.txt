@@ -1,0 +1,12 @@
+guia para el uso de kivyMD
+
+Tematicas:
+-material App
+    es la clase principal en nuestra aplicacion, que debe heredar de la clase MDApp.
+    las clase MDApp tiene propiedades que te permiten controlar propiedades de la aplicacion,
+    como el color, estilos, fuentes de los elementos de la interfaz y mucho más.
+-controlar propiedades de material
+    la clase principal de la apiclacion hereda de la clase MDapp el atributo theme_cls,
+    con el que podras controlar las propiedades de tu aplicacion material.
+
+-API - kivymd.theming
